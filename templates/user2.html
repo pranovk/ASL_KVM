@@ -1,0 +1,201 @@
+<html>
+<head>
+    <base target="_parent">
+  <title>HOME</title>
+    <link rel="stylesheet" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-4.11.0.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .column {
+  float: left;
+  height:70px;
+  width:50%;
+  padding: 0px;
+   /* Should be removed. Only for demonstration */
+}
+.iframe {
+  display: none;
+  position: fixed;
+  top: 50px;
+  width:1110px;
+  left: 90px;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+.form-container1 {
+  width: 1100px;
+  padding: 10px;
+  text-size:10px;
+  text-align:centre;
+  background-color: white;
+  font-size:17px;
+}
+.form-container1 .btn {
+  background-color:red;
+  color: white;
+  padding: 6px 20px;
+  border: none;
+  cursor: pointer;
+  position:relative;
+  left:400px;
+  width: 20%;
+  height:50px;
+  font-size:15px;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.navbar {
+  overflow: hidden;
+
+
+
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+</style>
+    <style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}
+</style>
+</head>
+<body aria-busy="true">
+<nav class="navbar " style="  opacity:0.8; background-color:#29B3C9;height:50px " >
+  <div class="container-fluid">
+    <div class="navbar-header" >
+
+      <a class="navbar-brand" href="#"></a>
+    </div>
+        <ul class="nav navbar-nav navbar-left" >
+        <li><a href="#" style="color:white;font-size:19px;position:relative;right:140px;top:15px"><i class="fa fa-user"></i>  {{username}}</a></li>
+
+        <li><a href="{{ url_for('login') }}" name="logout" style="color:white;font-size:19px;position:relative;right:-10px;bottom:13px"><i class="fa fa-sign-outk"></i>Logout</a></li>
+      </ul>
+
+  </div>
+</nav>
+
+
+
+<div class="container" >
+    <div class="row" style="padding:200px 0px 100px 240px ;float:right">
+{% for items in branch %}
+        {% if items == '' %}
+        <p></p>
+        {% else %}
+  <div class="col-6" >
+    <form method="post">
+    <h2 style="display:none" >ButtonPressed: {{ButtonPressed}}</h2>
+  <button type="button" class="btn btn-default waves-effect waves-light" data-toggle="modal" data-target="#frame1" onclick="frame1()" name="placeone" style=" border:0;border-radius: 10px;height:70px;width:430px;right:120px" value="">{{items}}</button>
+    </form>
+  </div>
+    <br>
+        {% endif %}
+
+{% endfor %}
+</div>
+
+</div>
+<!--Modal: Name-->
+
+<div class="iframe" id="frame1">
+  <form method="post" class="form-container1" >
+      <iframe id='iframe1' height="500px" width="100%" style='border:2px' src="/{{branch1}}" name="iframe_a1"></iframe>
+
+    <button type="button" class="btn cancel" name="cancel" style="" onclick="closeframe1()">Close</button>
+  </form>
+</div>
+<div class="iframe" id="frame2">
+  <form method="post" class="form-container1" >
+      <iframe id='iframe2' height="500px" width="100%" style='border:2px' src="/{{branch2}}" name="iframe_a2"></iframe>
+
+    <button type="button" class="btn cancel"  style="" name="cancel" onclick="closeframe2()">Close</button>
+  </form>
+</div>
+<div class="iframe" id="frame3">
+  <form method="post" class="form-container1" >
+      <iframe id='iframe3' height="500px" width="100%" style='border:2px' src="/{{branch3}}" name="iframe_a3"></iframe>
+
+    <button type="button" class="btn cancel"  style="" name="cancel" onclick="closeframe3()">Close</button>
+  </form>
+</div>
+<div class="iframe" id="frame4">
+  <form method="post" class="form-container1" >
+      <iframe id='iframe4' height="500px" width="100%" style='border:2px' src="/{{branch4}}" name="iframe_a4"></iframe>
+
+    <button type="button" class="btn cancel"  style="" name="cancel" onclick="closeframe4()">Close</button>
+  </form>
+</div>
+
+<script>
+
+    function frame1() {
+  document.getElementById("frame1").style.display = "block";
+}
+
+
+
+  function closeframe1() {
+  document.getElementById("frame1").style.display = "none";
+
+}
+
+    function frame2() {
+  document.getElementById("frame2").style.display = "block";
+}
+
+
+
+  function closeframe2() {
+  document.getElementById("frame2").style.display = "none";
+
+}
+    function frame3() {
+  document.getElementById("frame3").style.display = "block";
+}
+
+
+
+  function closeframe3() {
+  document.getElementById("frame3").style.display = "none";
+
+}
+    function frame4() {
+  document.getElementById("frame4").style.display = "block";
+}
+
+
+
+  function closeframe4() {
+  document.getElementById("frame4").style.display = "none";
+
+}
+
+
+</script>
+
+
+<script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/compiled-4.11.0.min.js"></script><div class="hiddendiv common"></div>
+<script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/plugins/mdb-plugins-gathered.min.js"></script>
+<script type="text/javascript">
+</script>
+
+</body>
+</html>

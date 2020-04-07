@@ -1,0 +1,30 @@
+{
+  "SuccessFlag": "True",
+  "OK": 200,
+  "Message": [
+    {
+      "RowNumber": 27,
+      "Main_Code": "CP",
+      "Main_Name": "CORPORATE PACKAGE",
+      "Dept_Code": "RP",
+      "Dept_Name": "CORPORATE PACKAGE",
+      "Test_Type": "P",
+      "Test_Code": "P00475",
+      "Test_Name": "AAROGYA SEVA HEALTH CHECKUP",
+      "Service_Order": 0.0,
+      "No_House_Visit": "",
+      "No_Result": "",
+      "ScDt_Scheme_Code": "000618",
+      "ScDt_Type": "P",
+      "ScDt_Code": "P00475",
+      "ScDt_Amount": 2999.00,
+      "ScDt_Edit_Date": "2018-08-03T13:47:14.73",
+      "ScDt_Edit_User": "C279",
+      "ScDt_From": null,
+      "ScDt_To": null,
+      "Amount": 2999.00,
+      "Total_Count": 1718,
+      "Total_Count2": 1718
+    }
+  ]
+}

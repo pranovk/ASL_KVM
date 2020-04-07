@@ -1,0 +1,97 @@
+<html>
+<head>
+    <base target="_parent">
+  <title>HOME</title>
+    <link rel="stylesheet" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-4.11.0.min.css">
+    <link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/mdb-plugins-gathered.min.css">
+    <style>
+
+    </style>
+    <style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}
+</style>
+</head>
+<body aria-busy="true">
+<div class="text-center">
+
+  <div class="col-xl-6 col-sm-6 mb-3" style="position:absolute;left:150px;top:200px" >
+    <form method="post">
+    <h2 style="display:none" >Button Pressed: {{ButtonPressed}}</h2>
+
+  <button type="button" class="btn btn-info waves-effect waves-light" data-toggle="modal" data-target="#branch1" name="placeone" style=" border:0;border-radius: 10px;height:70px;width:500px;right:120px" value="">{{branchname1}}</button>
+    </form>
+  </div>
+
+    <div class="col-xl-6 col-sm-6 mb-3" style="position:absolute;left:700px;top:200px">
+      <form method="post">
+        <h2 style="display:none" >Button Pressed: {{ButtonPressed}}</h2>
+    <button type="button" class="btn btn-default waves-effect waves-light" data-toggle="modal" data-target="#branch2"  name="placetwo" style="color:white; border:0;border-radius: 10px;height:70px;width:500px;right:120px " value="">{{branchname2}}</button>
+      </form>
+    </div>
+
+
+</div>
+<!--Modal: Name-->
+<div class="modal fade" id="branch1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+
+    <!--Content-->
+    <div class="modal-content" style="position:absolute;right:-150px;width:1100px">
+
+      <!--Body-->
+      <div class="modal-body mb-0 p-0">
+
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+          <iframe name="place1" class="embed-responsive-item" src="/{{branchname1}}" allowfullscreen=""></iframe>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+
+
+        <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4 waves-effect waves-light" data-dismiss="modal" name="close">Close</button>
+      </div>
+
+    </div>
+    <!--/.Content-->
+
+  </div>
+</div>
+<!--Modal: Name-->
+<div class="modal fade" id="branch2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+
+    <!--Content-->
+    <div class="modal-content" style="position:absolute;right:-150px;width:1100px">
+
+      <!--Body-->
+      <div class="modal-body mb-0 p-0">
+
+        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+          <iframe name='place2' class="embed-responsive-item" src="/{{branchname2}}" allowfullscreen=""></iframe>
+
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+
+        <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4 waves-effect waves-light" data-dismiss="modal">Close</button>
+
+      </div>
+
+    </div>
+  </div></div>
+
+
+<script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/compiled-4.11.0.min.js"></script><div class="hiddendiv common"></div>
+<script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/plugins/mdb-plugins-gathered.min.js"></script>
+<script type="text/javascript">
+</script>
+<script>
+
+</script>
+
+</body>
+</html>
